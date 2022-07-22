@@ -1,0 +1,17 @@
+body {
+	align-content: center;
+	background-color: black;
+	text-align: center;
+	padding-top: 2px;
+}
+
+h2 {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	color: white;
+}
+
+
+label {
+	color: white;
+}
+
