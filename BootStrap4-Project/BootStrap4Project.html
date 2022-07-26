@@ -10,6 +10,8 @@
    
 <title>Bootstrap-Project</title>
   </head>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
   <body>
 <!------------------------NAVBAR starts here----------------------->
     <div class="container">
@@ -44,6 +46,7 @@
 			<div class="container">
 				  <h1 class="display-4 text-light">Show-Time Blog</h1>
 				  <p class="lead text-light pb-3">Check out our must see movie, series and documentary suggestions</p>
+				<button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#register">This weeks Suggestions</button>
 			</div>
          </div>
 
@@ -146,10 +149,37 @@
 			<form>
 				<h1 class="text-muted my-5">Sign up today</h1>
 					<div class="form-group">
-					<input type="email" class="form-control" id="BottomOfPage" aria-describedby="emailHelp" placeholder="Enter email">
+					<input type="email" class="form-control"  id="BottomOfPage" aria-describedby="emailHelp" placeholder="Enter email">
 				</div>	
-  					<button type="submit" class="btn btn-secondary">Submit</button>
+  					<button type="button" class="btn btn-secondary popover-dismiss" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Sign up for Weekly Movie and Televison Suggestions">
+Sign Up</button>
 			</form>
+		<!--form modal section-->
+		<div class="modal" tabindex="-1" id="register">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title">Sign up</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				  </div>
+				  <div class="modal-body">
+					  <div class="row">
+						  <div class="col">
+							<input type="text" class="form-control" placeholder="First name" aria-label="First name">
+						  </div>
+						  <div class="col">
+							<input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+						  </div>
+					  </div>			  
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		<!--end of section>
 		</div>
 	</div>
 </div>  
@@ -159,13 +189,17 @@
 	  
 	  
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-    -->
+ <script>
+		  const popover = new bootstrap.Popover('.popover-dismiss', {
+			  trigger: 'focus'
+			})
+	  </script>
+	  
   </body>
 </html>
