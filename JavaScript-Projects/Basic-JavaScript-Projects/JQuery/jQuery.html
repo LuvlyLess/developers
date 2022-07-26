@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+</head>
+	<!--This Script calls jquery to show paragraphs-->
+<script>
+jQuery(document).ready(function() {
+    $("html").append(
+    "<body>\
+        <div id='container'>\
+            <div id='inner'>\
+                <h1>Basic jQuery</h1>\
+                <p id='1'>1</p>\
+                <p id='2'>2</p>\
+                <p id='3'>3</p>\
+            </div>\
+        </div>\
+    </body>"
+    ); 
+	$("#2").css({"color":"red"});
+    $("3").click(function() {
+        $('h1').hide();
+    });
+});
+
+	
+</script>
+</html>
