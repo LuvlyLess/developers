@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Tic Tac Toe</title>
-        <script src="JS/main.js"></script>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
         <link rel="stylesheet" href="CSS/game.css">
@@ -12,8 +12,8 @@
     <h1> Welcome, TicTacToe player 1</h1>
 
     <!--this container is needed to overlay canvas over table-->
-    <div class="canter-container">
-        <canvas id="win-lines" width="608"></canvas>
+    <div class="center-container">
+        <canvas id="win-lines" width="608" height="608"></canvas>
         <table>
             <tr>
                 <td id="0" onclick="placeXOrO('0')"></td>
@@ -32,6 +32,7 @@
             </tr>
         </table>
     </div>
+    <script src="JS/tictactoe.js"></script>
 </body>
 </html>
 
